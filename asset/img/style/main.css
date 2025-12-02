@@ -1,0 +1,60 @@
+  :root{
+        --default-font:   "Geologica", sans-serif;
+        --judul-font: "La Belle Aurore", cursive;
+
+        /* color */
+        --default-color: #de5d3b;
+        --background-color: #f7f3f1;
+    }
+
+    body {
+      font-family: var(--default-font);
+      color: var(--default-color);
+      background: var(--background-color);
+    }
+
+    .container .logo-brand {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo-brand img {
+        width: 60px !important;
+    }
+
+    .menu-card img {
+      height: 350px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .menu-card {
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    }
+
+    .price {
+      color:var(--default-color);
+      font-weight: 600;
+    }
+
+    .container .title-font{
+        font-family: var(--judul-font);
+        font-size: 30px;
+
+    }
+
+
+    .modal-body h4{
+        color: var(--default-color);
+    }
