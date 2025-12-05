@@ -4,14 +4,14 @@ const menu = [
   {
     name: "Avocado Toast",
     price: "90K",
-    img: "../img/AVOCADO-TOAST.jpg",
+    img: "https://sinisajaubud.github.io/menu/asset/img/ATLANTIC.jpg",
     category: "starter",
     desc: "Sourdough toast with guacamole, parmesan, poached eggs, watercress, cherry tomato, dukkah."
   },
   {
     name: "Atlantic",
     price: "120K",
-    img: "../img/ATLANTIC.jpg",
+    img: "https://sinisajaubud.github.io/menu/asset/img/ATLANTIC.jpg",
     category: "starter",
     desc: "Smoked salmon, smashed avocado, dill-lemon cream cheese, pickled cucumber, capers, sourdough"
   },
