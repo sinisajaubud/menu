@@ -55,6 +55,12 @@
     }
 
 
+
     .modal-body h4{
         color: var(--default-color);
+    }
+
+    .modal-footer .btn-online{
+      background-color: var(--default-color);
+      color: var(--background-color);
     }
