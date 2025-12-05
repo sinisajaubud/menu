@@ -4,7 +4,7 @@ const menu = [
   {
     name: "Avocado Toast",
     price: "90K",
-    img: "..img/AVOCADO-TOAST.jpg",
+    img: "../img/AVOCADO-TOAST.jpg",
     category: "starter",
     desc: "Sourdough toast with guacamole, parmesan, poached eggs, watercress, cherry tomato, dukkah."
   },
@@ -25,14 +25,14 @@ const menu = [
   {
     name: "Scrambled Favo",
     price: "110K",
-    img: "asset/img/scrambled favo.jpg",
+    img: "../img/SCRAMBLED-FAVO.jpg",
     category: "starter",
     desc: "Soft scrambled eggs, streaky bacon, mushroom hollandaise, butter croissant, mixed salad."
   },
   {
     name: "Turkish Egg",
     price: "85K",
-    img: "asset/img/turkish egg.jpg",
+    img: "../img/TURKISH-EGG.jpg",
     category: "starter",
     desc: "Poached egg, dill yoghurt sauce, aleppo butter, parsley, jalapeno oil, sourdough."
   },
@@ -83,6 +83,7 @@ const menu = [
     desc: "Classic sundae with mixed toppings and vanilla ice cream."
   }
 ];
+
 
 // DOM TARGETS
 const starterList = document.getElementById("starterList");
