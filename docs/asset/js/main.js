@@ -4,7 +4,7 @@ const menu = [
   {
     name: "Avocado Toast",
     price: "90K",
-    img: "https://sinisajaubud.github.io/menu/asset/img/ATLANTIC.jpg",
+    img: "https://sinisajaubud.github.io/menu/asset/img/AVOCADO-TOAST.jpg",
     category: "starter",
     desc: "Sourdough toast with guacamole, parmesan, poached eggs, watercress, cherry tomato, dukkah."
   },
@@ -18,21 +18,21 @@ const menu = [
   {
     name: "Morning Bliss",
     price: "100K",
-    img: "../img/MORNING-BLISS.jpg",
+    img: "https://sinisajaubud.github.io/menu/asset/img/MORNING-BLISS.jpg",
     category: "starter",
     desc: "Two eggs any style, roasted mushroom, streaky bacon, confit cherry tomato, hash brown, sausage, caramelized onion."
   },
   {
     name: "Scrambled Favo",
     price: "110K",
-    img: "../img/SCRAMBLED-FAVO.jpg",
+    img: "https://sinisajaubud.github.io/menu/asset/img/SCRAMBLED-FAVO.jpg",
     category: "starter",
     desc: "Soft scrambled eggs, streaky bacon, mushroom hollandaise, butter croissant, mixed salad."
   },
   {
     name: "Turkish Egg",
     price: "85K",
-    img: "../img/TURKISH-EGG.jpg",
+    img: "https://sinisajaubud.github.io/menu/asset/img/TURKISH-EGG.jpg",
     category: "starter",
     desc: "Poached egg, dill yoghurt sauce, aleppo butter, parsley, jalapeno oil, sourdough."
   },
@@ -41,21 +41,21 @@ const menu = [
   {
     name: "Chicken Teriyaki Bowl",
     price: "65K",
-    img: "https://images.unsplash.com/photo-1605478371319-1d990917ec5e",
+    img: "https://source.unsplash.com/600x400/?chicken-teriyaki",
     category: "main",
     desc: "Japanese-style glazed chicken served with rice and vegetables."
   },
   {
     name: "Beef Steak",
     price: "120K",
-    img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
+    img: "https://source.unsplash.com/600x400/?beef-steak",
     category: "main",
     desc: "Juicy grilled beef steak cooked to perfection."
   },
   {
     name: "Pasta Alfredo",
     price: "70K",
-    img: "https://images.unsplash.com/photo-1525755662778-989d0524087e",
+    img: "https://source.unsplash.com/600x400/?pasta-alfredo",
     category: "main",
     desc: "Creamy Alfredo pasta with parmesan cheese."
   },
@@ -64,26 +64,25 @@ const menu = [
   {
     name: "Chocolate Lava Cake",
     price: "45K",
-    img: "https://images.unsplash.com/photo-1605478800477-1fca4148c7a3",
+    img: "https://source.unsplash.com/600x400/?chocolate-lava-cake",
     category: "dessert",
     desc: "Warm chocolate cake with melting center."
   },
   {
     name: "Strawberry Cheesecake",
     price: "50K",
-    img: "https://images.unsplash.com/photo-1505250469679-203ad9ced0cb",
+    img: "https://source.unsplash.com/600x400/?strawberry-cheesecake",
     category: "dessert",
     desc: "Soft and creamy cheesecake topped with strawberry sauce."
   },
   {
     name: "Ice Cream Sundae",
     price: "30K",
-    img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb",
+    img: "https://source.unsplash.com/600x400/?ice-cream-sundae",
     category: "dessert",
     desc: "Classic sundae with mixed toppings and vanilla ice cream."
   }
 ];
-
 
 // DOM TARGETS
 const starterList = document.getElementById("starterList");
