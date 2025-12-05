@@ -1,110 +1,118 @@
 // MENU DATA
 const menu = [
-  // STARTER
+  // BREAKFAST
   {
     name: "Avocado Toast",
     price: "90K",
     img: "https://sinisajaubud.github.io/menu/asset/img/AVOCADO-TOAST.jpg",
-    category: "starter",
+    category: "breakfast",
     desc: "Sourdough toast with guacamole, parmesan, poached eggs, watercress, cherry tomato, dukkah."
   },
   {
     name: "Atlantic",
     price: "120K",
     img: "https://sinisajaubud.github.io/menu/asset/img/ATLANTIC.jpg",
-    category: "starter",
+    category: "breakfast",
     desc: "Smoked salmon, smashed avocado, dill-lemon cream cheese, pickled cucumber, capers, sourdough"
   },
   {
     name: "Morning Bliss",
     price: "100K",
     img: "https://sinisajaubud.github.io/menu/asset/img/MORNING-BLISS.jpg",
-    category: "starter",
+    category: "breakfast",
     desc: "Two eggs any style, roasted mushroom, streaky bacon, confit cherry tomato, hash brown, sausage, caramelized onion."
   },
   {
     name: "Scrambled Favo",
     price: "110K",
     img: "https://sinisajaubud.github.io/menu/asset/img/SCRAMBLED-FAVO.jpg",
-    category: "starter",
+    category: "breakfast",
     desc: "Soft scrambled eggs, streaky bacon, mushroom hollandaise, butter croissant, mixed salad."
   },
   {
     name: "Turkish Egg",
     price: "85K",
     img: "https://sinisajaubud.github.io/menu/asset/img/TURKISH-EGG.jpg",
-    category: "starter",
+    category: "breakfast",
+    desc: "Poached egg, dill yoghurt sauce, aleppo butter, parsley, jalapeno oil, sourdough."
+  },
+  {
+    name: "Chili Crab Meat Scramble",
+    price: "95K",
+    img: "https://sinisajaubud.github.io/menu/asset/img/CHILI-CRAB.jpg",
+    category: "breakfast",
     desc: "Poached egg, dill yoghurt sauce, aleppo butter, parsley, jalapeno oil, sourdough."
   },
 
-  // MAIN COURSE
+  // LUNCH
   {
     name: "Chicken Teriyaki Bowl",
     price: "65K",
     img: "https://source.unsplash.com/600x400/?chicken-teriyaki",
-    category: "main",
+    category: "lunch",
     desc: "Japanese-style glazed chicken served with rice and vegetables."
   },
   {
     name: "Beef Steak",
     price: "120K",
     img: "https://source.unsplash.com/600x400/?beef-steak",
-    category: "main",
+    category: "lunch",
     desc: "Juicy grilled beef steak cooked to perfection."
   },
   {
     name: "Pasta Alfredo",
     price: "70K",
     img: "https://source.unsplash.com/600x400/?pasta-alfredo",
-    category: "main",
+    category: "lunch",
     desc: "Creamy Alfredo pasta with parmesan cheese."
   },
 
-  // DESSERT
+  // DINNER
   {
     name: "Chocolate Lava Cake",
     price: "45K",
     img: "https://source.unsplash.com/600x400/?chocolate-lava-cake",
-    category: "dessert",
+    category: "dinner",
     desc: "Warm chocolate cake with melting center."
   },
   {
     name: "Strawberry Cheesecake",
     price: "50K",
     img: "https://source.unsplash.com/600x400/?strawberry-cheesecake",
-    category: "dessert",
+    category: "dinner",
     desc: "Soft and creamy cheesecake topped with strawberry sauce."
   },
   {
     name: "Ice Cream Sundae",
     price: "30K",
     img: "https://source.unsplash.com/600x400/?ice-cream-sundae",
-    category: "dessert",
+    category: "dinner",
     desc: "Classic sundae with mixed toppings and vanilla ice cream."
   }
 ];
 
-// DOM TARGETS
-const starterList = document.getElementById("starterList");
-const mainList = document.getElementById("mainList");
-const dessertList = document.getElementById("dessertList");
+// DOM TARGETS — ALL UPDATED
+const breakfastList = document.getElementById("breakfastList");
+const lunchList = document.getElementById("lunchList");
+const dinnerList = document.getElementById("dinnerList");
 
-const starterSection = document.getElementById("starterSection");
-const mainSection = document.getElementById("mainSection");
-const dessertSection = document.getElementById("dessertSection");
+const breakfastSection = document.getElementById("breakfastSection");
+const lunchSection = document.getElementById("lunchSection");
+const dinnerSection = document.getElementById("dinnerSection");
+
 const searchInput = document.getElementById("searchInput");
 
 // RENDER MENU
 function renderMenu(filter = "") {
   const keyword = filter.toLowerCase().trim();
 
-  starterList.innerHTML = "";
-  mainList.innerHTML = "";
-  dessertList.innerHTML = "";
+  breakfastList.innerHTML = "";
+  lunchList.innerHTML = "";
+  dinnerList.innerHTML = "";
 
-  let starterFound = false;
-  let mainFound = false;
-  let dessertFound = false;
+  let breakfastFound = false;
+  let lunchFound = false;
+  let dinnerFound = false;
 
   menu.forEach(item => {
     const nameMatch = item.name.toLowerCase().includes(keyword);
@@ -125,15 +133,15 @@ function renderMenu(filter = "") {
         </div>
       `;
 
-      if (item.category === "starter") { starterList.innerHTML += card; starterFound = true; }
-      if (item.category === "main") { mainList.innerHTML += card; mainFound = true; }
-      if (item.category === "dessert") { dessertList.innerHTML += card; dessertFound = true; }
+      if (item.category === "breakfast") { breakfastList.innerHTML += card; breakfastFound = true; }
+      if (item.category === "lunch") { lunchList.innerHTML += card; lunchFound = true; }
+      if (item.category === "dinner") { dinnerList.innerHTML += card; dinnerFound = true; }
     }
   });
 
-  starterSection.style.display = starterFound ? "block" : "none";
-  mainSection.style.display = mainFound ? "block" : "none";
-  dessertSection.style.display = dessertFound ? "block" : "none";
+  breakfastSection.style.display = breakfastFound ? "block" : "none";
+  lunchSection.style.display = lunchFound ? "block" : "none";
+  dinnerSection.style.display = dinnerFound ? "block" : "none";
 }
 
 // POPUP FUNCTION
