@@ -148,8 +148,7 @@ function openMenuModal(encodedName) {
   document.getElementById("modalPrice").innerText = item.price;
 
   document.getElementById("orderBtn").href =
-    "https://wa.me/6281234567890?text=" +
-    encodeURIComponent("Halo, saya ingin order " + item.name);
+    "https://gofood.link/a/PJ26vg7";
 
   const modal = new bootstrap.Modal(document.getElementById("menuModal"));
   modal.show();
