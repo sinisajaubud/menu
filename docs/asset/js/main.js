@@ -11,14 +11,14 @@ const menu = [
   {
     name: "Atlantic",
     price: "120K",
-    img: "../img/atlantic.jpg",
+    img: "../img/ATLANTIC.jpg",
     category: "starter",
     desc: "Smoked salmon, smashed avocado, dill-lemon cream cheese, pickled cucumber, capers, sourdough"
   },
   {
     name: "Morning Bliss",
     price: "100K",
-    img: "asset/img/mornning bliss.jpg",
+    img: "../img/MORNING-BLISS.jpg",
     category: "starter",
     desc: "Two eggs any style, roasted mushroom, streaky bacon, confit cherry tomato, hash brown, sausage, caramelized onion."
   },
