@@ -1,103 +1,162 @@
- // MENU DATA
-  const menu = [
-    // STARTER
-    { name: "Avocado Croast", price: "90K", img: "/asset/img/avocado toast.jpg", category: "starter", desc: "Sourdough toast with guacamole, parmesan, poached eggs, watercress, cherry tomato, dukkah." },
-    { name: "Atlantic", price: "120K", img: "/asset/img/atlantic.jpg", category: "starter", desc: "Smoked salmon, smashed avocado, dill-lemon cream cheese, pickled cucumber, capers, sourdough" },
-    { name: "Morning Bliss", price: "100K", img: "/asset/img/mornning bliss.jpg", category: "starter", desc: "Two eggs any style, roasted mushroom, streaky bacon, confit cherry tomato, hash brown, sausage, caramelized onion." },
-     { name: "Scrambled-Favo", price:"110K", img: "/asset/img/scrambled favo.jpg", category: "starter", desc: "Soft crambled eggs, streaky bacon, mushroom hollandaise, butter croissant, mixed salad." },
-      { name: "Turkish Egg", price:"85K", img: "/asset/img/turkish egg.jpg", category: "starter", desc: "Poached egg, dill yoghurt sauce, aleppo butter, parsley, jalapeno oil, sourdough." },
-     { name: "Turkish Egg", price:"85K", img: "/asset/img/turkish egg.jpg", category: "starter", desc: "Poached egg, dill yoghurt sauce, aleppo butter, parsley, jalapeno oil, sourdough." },
+// MENU DATA
+const menu = [
+  // STARTER
+  {
+    name: "Avocado Toast",
+    price: "90K",
+    img: "asset/img/avocado toast.jpg",
+    category: "starter",
+    desc: "Sourdough toast with guacamole, parmesan, poached eggs, watercress, cherry tomato, dukkah."
+  },
+  {
+    name: "Atlantic",
+    price: "120K",
+    img: "asset/img/atlantic.jpg",
+    category: "starter",
+    desc: "Smoked salmon, smashed avocado, dill-lemon cream cheese, pickled cucumber, capers, sourdough"
+  },
+  {
+    name: "Morning Bliss",
+    price: "100K",
+    img: "asset/img/morning bliss.jpg",
+    category: "starter",
+    desc: "Two eggs any style, roasted mushroom, streaky bacon, confit cherry tomato, hash brown, sausage, caramelized onion."
+  },
+  {
+    name: "Scrambled Favo",
+    price: "110K",
+    img: "asset/img/scrambled favo.jpg",
+    category: "starter",
+    desc: "Soft scrambled eggs, streaky bacon, mushroom hollandaise, butter croissant, mixed salad."
+  },
+  {
+    name: "Turkish Egg",
+    price: "85K",
+    img: "asset/img/turkish egg.jpg",
+    category: "starter",
+    desc: "Poached egg, dill yoghurt sauce, aleppo butter, parsley, jalapeno oil, sourdough."
+  },
 
+  // MAIN COURSE
+  {
+    name: "Chicken Teriyaki Bowl",
+    price: "65K",
+    img: "https://images.unsplash.com/photo-1605478371319-1d990917ec5e",
+    category: "main",
+    desc: "Japanese-style glazed chicken served with rice and vegetables."
+  },
+  {
+    name: "Beef Steak",
+    price: "120K",
+    img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
+    category: "main",
+    desc: "Juicy grilled beef steak cooked to perfection."
+  },
+  {
+    name: "Pasta Alfredo",
+    price: "70K",
+    img: "https://images.unsplash.com/photo-1525755662778-989d0524087e",
+    category: "main",
+    desc: "Creamy Alfredo pasta with parmesan cheese."
+  },
 
+  // DESSERT
+  {
+    name: "Chocolate Lava Cake",
+    price: "45K",
+    img: "https://images.unsplash.com/photo-1605478800477-1fca4148c7a3",
+    category: "dessert",
+    desc: "Warm chocolate cake with melting center."
+  },
+  {
+    name: "Strawberry Cheesecake",
+    price: "50K",
+    img: "https://images.unsplash.com/photo-1505250469679-203ad9ced0cb",
+    category: "dessert",
+    desc: "Soft and creamy cheesecake topped with strawberry sauce."
+  },
+  {
+    name: "Ice Cream Sundae",
+    price: "30K",
+    img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb",
+    category: "dessert",
+    desc: "Classic sundae with mixed toppings and vanilla ice cream."
+  }
+];
 
-    // MAIN COURSE
-    { name: "Chicken Teriyaki Bowl", price: "65K", img: "https://images.unsplash.com/photo-1605478371319-1d990917ec5e", category: "main", desc: "Japanese-style glazed chicken served with rice and vegetables." },
-    { name: "Beef Steak", price: "120K", img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092", category: "main", desc: "Juicy grilled beef steak cooked to perfection." },
-    { name: "Pasta Alfredo", price: "70K", img: "https://images.unsplash.com/photo-1525755662778-989d0524087e", category: "main", desc: "Creamy Alfredo pasta with parmesan cheese." },
+// DOM TARGETS
+const starterList = document.getElementById("starterList");
+const mainList = document.getElementById("mainList");
+const dessertList = document.getElementById("dessertList");
 
-    // DESSERT
-    { name: "Chocolate Lava Cake", price: "45K", img: "https://images.unsplash.com/photo-1605478800477-1fca4148c7a3", category: "dessert", desc: "Warm chocolate cake with melting center." },
-    { name: "Strawberry Cheesecake", price: "50K", img: "https://images.unsplash.com/photo-1505250469679-203ad9ced0cb", category: "dessert", desc: "Soft and creamy cheesecake topped with strawberry sauce." },
-    { name: "Ice Cream Sundae", price: "30K", img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb", category: "dessert", desc: "Classic sundae with mixed toppings and vanilla ice cream." }
-  ];
+const starterSection = document.getElementById("starterSection");
+const mainSection = document.getElementById("mainSection");
+const dessertSection = document.getElementById("dessertSection");
 
-  // DOM TARGETS
-  const starterList = document.getElementById("starterList");
-  const mainList = document.getElementById("mainList");
-  const dessertList = document.getElementById("dessertList");
+const searchInput = document.getElementById("searchInput");
 
-  const starterSection = document.getElementById("starterSection");
-  const mainSection = document.getElementById("mainSection");
-  const dessertSection = document.getElementById("dessertSection");
+// RENDER MENU
+function renderMenu(filter = "") {
+  const keyword = filter.toLowerCase();
 
-  const searchInput = document.getElementById("searchInput");
+  starterList.innerHTML = "";
+  mainList.innerHTML = "";
+  dessertList.innerHTML = "";
 
-  // RENDER MENU
-  function renderMenu(filter = "") {
-    const keyword = filter.toLowerCase();
+  let starterFound = false;
+  let mainFound = false;
+  let dessertFound = false;
 
-    starterList.innerHTML = "";
-    mainList.innerHTML = "";
-    dessertList.innerHTML = "";
+  menu.forEach(item => {
+    const nameMatch = item.name.toLowerCase().includes(keyword);
+    const categoryMatch = item.category.toLowerCase().includes(keyword);
 
-    const keywordIsStarter = "starter".includes(keyword);
-    const keywordIsMain = "main".includes(keyword);
-    const keywordIsDessert = "dessert".includes(keyword);
-
-    let starterFound = false;
-    let mainFound = false;
-    let dessertFound = false;
-
-    menu.forEach(item => {
-      const nameMatch = item.name.toLowerCase().includes(keyword);
-      const categoryMatch =
-        (item.category === "starter" && keywordIsStarter) ||
-        (item.category === "main" && keywordIsMain) ||
-        (item.category === "dessert" && keywordIsDessert);
-
-      if (nameMatch || categoryMatch) {
-
-        const card = `
-          <div class="col-md-4 menu-item">
-            <div class="card menu-card p-2" onclick="openMenuModal('${item.name}')">
-              <img src="${item.img}" class="card-img-top" alt="${item.name}">
-              <div class="card-body">
-                <h5 class="card-title">${item.name}</h5>
-                <p class="price">${item.price}</p>
-              </div>
+    if (nameMatch || categoryMatch || keyword === "") {
+      const card = `
+        <div class="col-md-4 menu-item">
+          <div class="card menu-card p-2" onclick="openMenuModal('${item.name.replace(/'/g, "\\'")}')">
+            <img src="${item.img}" class="card-img-top" alt="${item.name}">
+            <div class="card-body">
+              <h5 class="card-title">${item.name}</h5>
+              <p class="price">${item.price}</p>
             </div>
           </div>
-        `;
+        </div>
+      `;
 
-        if (item.category === "starter") { starterList.innerHTML += card; starterFound = true; }
-        if (item.category === "main") { mainList.innerHTML += card; mainFound = true; }
-        if (item.category === "dessert") { dessertList.innerHTML += card; dessertFound = true; }
-      }
-    });
-
-    starterSection.style.display = (starterFound || keywordIsStarter) ? "block" : "none";
-    mainSection.style.display = (mainFound || keywordIsMain) ? "block" : "none";
-    dessertSection.style.display = (dessertFound || keywordIsDessert) ? "block" : "none";
-  }
-
-  // POPUP FUNCTION
-  function openMenuModal(name) {
-    const item = menu.find(m => m.name === name);
-
-    document.getElementById("modalTitle").innerText = item.name;
-    document.getElementById("modalImg").src = item.img;
-    document.getElementById("modalDesc").innerText = item.desc;
-    document.getElementById("modalPrice").innerText = item.price;
-
-    document.getElementById("orderBtn").href =
-      "https://wa.me/6281234567890?text=Halo, saya ingin order " + encodeURIComponent(item.name);
-
-    const modal = new bootstrap.Modal(document.getElementById("menuModal"));
-    modal.show();
-  }
-
-  renderMenu();
-
-  searchInput.addEventListener("input", () => {
-    renderMenu(searchInput.value);
+      if (item.category === "starter") { starterList.innerHTML += card; starterFound = true; }
+      if (item.category === "main") { mainList.innerHTML += card; mainFound = true; }
+      if (item.category === "dessert") { dessertList.innerHTML += card; dessertFound = true; }
+    }
   });
+
+  starterSection.style.display = starterFound ? "block" : "none";
+  mainSection.style.display = mainFound ? "block" : "none";
+  dessertSection.style.display = dessertFound ? "block" : "none";
+}
+
+// POPUP FUNCTION
+function openMenuModal(name) {
+  const item = menu.find(m => m.name === name);
+  if (!item) return;
+
+  document.getElementById("modalTitle").innerText = item.name;
+  document.getElementById("modalImg").src = item.img;
+  document.getElementById("modalDesc").innerText = item.desc;
+  document.getElementById("modalPrice").innerText = item.price;
+
+  document.getElementById("orderBtn").href =
+    "https://wa.me/6281234567890?text=" +
+    encodeURIComponent("Halo, saya ingin order " + item.name);
+
+  const modal = new bootstrap.Modal(document.getElementById("menuModal"));
+  modal.show();
+}
+
+// INITIAL LOAD
+renderMenu();
+
+// SEARCH
+searchInput.addEventListener("input", () => {
+  renderMenu(searchInput.value);
+});
