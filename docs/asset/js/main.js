@@ -4,7 +4,7 @@ const menu = [
   {
     name: "Avocado Toast",
     price: "90K",
-    img: "asset/img/avocado_toast.jpg",
+    img: "asset/img/avocado toast.jpg",
     category: "starter",
     desc: "Sourdough toast with guacamole, parmesan, poached eggs, watercress, cherry tomato, dukkah."
   },
@@ -18,21 +18,21 @@ const menu = [
   {
     name: "Morning Bliss",
     price: "100K",
-    img: "asset/img/morning_bliss.jpg",
+    img: "asset/img/mornning bliss.jpg",
     category: "starter",
     desc: "Two eggs any style, roasted mushroom, streaky bacon, confit cherry tomato, hash brown, sausage, caramelized onion."
   },
   {
     name: "Scrambled Favo",
     price: "110K",
-    img: "asset/img/scrambled_favo.jpg",
+    img: "asset/img/scrambled favo.jpg",
     category: "starter",
     desc: "Soft scrambled eggs, streaky bacon, mushroom hollandaise, butter croissant, mixed salad."
   },
   {
     name: "Turkish Egg",
     price: "85K",
-    img: "asset/img/turkish_egg.jpg",
+    img: "asset/img/turkish egg.jpg",
     category: "starter",
     desc: "Poached egg, dill yoghurt sauce, aleppo butter, parsley, jalapeno oil, sourdough."
   },
