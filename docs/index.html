@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=La+Belle+Aurore&display=swap" rel="stylesheet">
 
   <!-- Css Link -->
-   <link rel="stylesheet" href="asset/style/style.css">
+  <link rel="stylesheet" href="asset/style/style.css">
 </head>
 
 <body>
@@ -22,7 +22,9 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg bg-light shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold logo-brand" href="#"><img src="asset/img/logo.png" alt=""></a>
+    <a class="navbar-brand fw-bold logo-brand" href="#">
+      <img src="asset/img/logo.png" alt="">
+    </a>
   </div>
 </nav>
 
@@ -32,7 +34,6 @@
     <h1 class="fw-bold">Our Menu</h1>
     <p class="text-muted">Find your favorite dish.</p>
 
-    <!-- SEARCH -->
     <div class="row justify-content-center mt-4">
       <div class="col-md-6">
         <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Search food...">
@@ -44,19 +45,16 @@
 <!-- MENU SECTIONS -->
 <div class="container py-5">
 
-  <!-- STARTER -->
   <div id="starterSection">
     <h3 class="fw-bold mb-3 title-font">Starter</h3>
     <div class="row g-4" id="starterList"></div>
   </div>
 
-  <!-- MAIN COURSE -->
   <div id="mainSection" class="mt-5">
     <h3 class="fw-bold mb-3 title-font">Main Course</h3>
     <div class="row g-4" id="mainList"></div>
   </div>
 
-  <!-- DESSERT -->
   <div id="dessertSection" class="mt-5">
     <h3 class="fw-bold mb-3 title-font">Dessert</h3>
     <div class="row g-4" id="dessertList"></div>
@@ -68,7 +66,6 @@
 <footer class="text-center text-muted py-4">
   © 2025 Sini Saja Ubud
 </footer>
-
 
 <!-- POPUP MODAL -->
 <div class="modal fade" id="menuModal" tabindex="-1">
@@ -94,7 +91,8 @@
   </div>
 </div>
 
-<script src="/asset/js/main.js"></script>
+<!-- JS -->
+<script src="asset/js/main.js"></script>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
