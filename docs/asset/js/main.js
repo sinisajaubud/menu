@@ -4,7 +4,7 @@ const menu = [
   {
     name: "Avocado Toast",
     price: "90K",
-    img: "asset/img/avocado toast.jpg",
+    img: "asset/img/avocado_toast.jpg",
     category: "starter",
     desc: "Sourdough toast with guacamole, parmesan, poached eggs, watercress, cherry tomato, dukkah."
   },
@@ -18,21 +18,21 @@ const menu = [
   {
     name: "Morning Bliss",
     price: "100K",
-    img: "asset/img/morning bliss.jpg",
+    img: "asset/img/morning_bliss.jpg",
     category: "starter",
     desc: "Two eggs any style, roasted mushroom, streaky bacon, confit cherry tomato, hash brown, sausage, caramelized onion."
   },
   {
     name: "Scrambled Favo",
     price: "110K",
-    img: "asset/img/scrambled favo.jpg",
+    img: "asset/img/scrambled_favo.jpg",
     category: "starter",
     desc: "Soft scrambled eggs, streaky bacon, mushroom hollandaise, butter croissant, mixed salad."
   },
   {
     name: "Turkish Egg",
     price: "85K",
-    img: "asset/img/turkish egg.jpg",
+    img: "asset/img/turkish_egg.jpg",
     category: "starter",
     desc: "Poached egg, dill yoghurt sauce, aleppo butter, parsley, jalapeno oil, sourdough."
   },
@@ -92,12 +92,11 @@ const dessertList = document.getElementById("dessertList");
 const starterSection = document.getElementById("starterSection");
 const mainSection = document.getElementById("mainSection");
 const dessertSection = document.getElementById("dessertSection");
-
 const searchInput = document.getElementById("searchInput");
 
 // RENDER MENU
 function renderMenu(filter = "") {
-  const keyword = filter.toLowerCase();
+  const keyword = filter.toLowerCase().trim();
 
   starterList.innerHTML = "";
   mainList.innerHTML = "";
@@ -111,10 +110,12 @@ function renderMenu(filter = "") {
     const nameMatch = item.name.toLowerCase().includes(keyword);
     const categoryMatch = item.category.toLowerCase().includes(keyword);
 
-    if (nameMatch || categoryMatch || keyword === "") {
+    if (keyword === "" || nameMatch || categoryMatch) {
+      const safeName = encodeURIComponent(item.name);
+
       const card = `
         <div class="col-md-4 menu-item">
-          <div class="card menu-card p-2" onclick="openMenuModal('${item.name.replace(/'/g, "\\'")}')">
+          <div class="card menu-card p-2" onclick="openMenuModal('${safeName}')">
             <img src="${item.img}" class="card-img-top" alt="${item.name}">
             <div class="card-body">
               <h5 class="card-title">${item.name}</h5>
@@ -136,7 +137,8 @@ function renderMenu(filter = "") {
 }
 
 // POPUP FUNCTION
-function openMenuModal(name) {
+function openMenuModal(encodedName) {
+  const name = decodeURIComponent(encodedName);
   const item = menu.find(m => m.name === name);
   if (!item) return;
 
@@ -154,9 +156,12 @@ function openMenuModal(name) {
 }
 
 // INITIAL LOAD
-renderMenu();
+document.addEventListener("DOMContentLoaded", () => {
+  renderMenu();
 
-// SEARCH
-searchInput.addEventListener("input", () => {
-  renderMenu(searchInput.value);
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      renderMenu(searchInput.value);
+    });
+  }
 });
