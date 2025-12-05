@@ -4,7 +4,7 @@ const menu = [
   {
     name: "Avocado Toast",
     price: "90K",
-    img: "asset/img/AVOCADO-TOAST.jpg",
+    img: "https://source.unsplash.com/600x400/?avocado-toast",
     category: "starter",
     desc: "Sourdough toast with guacamole, parmesan, poached eggs, watercress, cherry tomato, dukkah."
   },
