@@ -11,7 +11,7 @@ const menu = [
   {
     name: "Atlantic",
     price: "120K",
-    img: "asset/img/atlantic.jpg",
+    img: "../img/atlantic.jpg",
     category: "starter",
     desc: "Smoked salmon, smashed avocado, dill-lemon cream cheese, pickled cucumber, capers, sourdough"
   },
